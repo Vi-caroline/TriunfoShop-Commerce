@@ -78,7 +78,6 @@
                         </h1>
                     </div>
                     <div style="display:flex;align-items:center;gap:16px;">
-                        <a href="../index.html" class="header-btn" style="background:rgba(142,68,173,0.18);color:#fff;padding:0.7rem 1.5rem;border-radius:10px;font-size:1rem;font-weight:600;display:flex;align-items:center;gap:0.5rem;text-decoration:none;"><i class="fas fa-store"></i> Loja</a>
                         <button id="btn-carrinho" style="background:#8e44ad;color:#fff;border:none;padding:0.7rem 1.5rem;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;z-index:10;display:flex;align-items:center;gap:0.5rem;"><i class="fas fa-shopping-cart"></i> Carrinho</button>
                         <button id="logoutBtn" style="background:#e74c3c;color:#fff;border:none;padding:0.7rem 1.5rem;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;z-index:10;display:flex;align-items:center;gap:0.5rem;"><i class="fas fa-sign-out-alt"></i> Sair</button>
                     </div>
@@ -115,6 +114,15 @@
     </div>
 
     <script>
+    // Logout responsivo
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+        if (window.userManagement && typeof window.userManagement.logout === 'function') {
+            window.userManagement.logout();
+        } else {
+            localStorage.removeItem('currentUser');
+        }
+        window.location.href = '../index.html';
+    });
     // Produtos reais (apenas 8)
     const produtos = [
     { id: 'PROD-0001', nome: 'Smart TV Lenovo 55" 4K UHD', preco: 1204.84, estoque: 0, imagem: 'https://images.samsung.com/is/image/samsung/p6pim/br/un55au7700gxzd/gallery/br-uhd-4k-tv-un55au7700gxzd---532138317?$650_519_PNG$', categoria: 'Eletrônicos' },

@@ -1,12 +1,12 @@
 .btn-ver-detalhes, .btn-primary.btn-ver-detalhes {
-    width: 180px !important;
-    height: 40.8px !important;
+    width: 140px !important;
+    height: 36px !important;
     max-width: 100%;
-    font-size: 16px !important;
+    font-size: 1rem !important;
     font-family: Arial, sans-serif !important;
-    padding: 11.2px 0 !important;
+    padding: 0.5rem 0 !important;
     border-radius: 8px !important;
-    margin: 11.2px 72.66px 0 0 !important;
+    margin: 0.75rem auto 0 auto !important;
     display: block !important;
     background: linear-gradient(135deg, #8e44ad, #7d3c98) !important;
     color: #fff !important;
@@ -37,20 +37,20 @@
 }
 /* Garante tamanho único para todos os botões Ver Detalhes */
 .btn-ver-detalhes {
-    width: 180px !important;
+    width: 140px !important;
     max-width: 100%;
     font-size: 1rem !important;
-    padding: 0.7rem 0 !important;
+    padding: 0.5rem 0 !important;
     border-radius: 8px !important;
     margin: 0.7rem auto 0 auto !important;
     display: block !important;
 }
 /* Ajuste do botão Ver Detalhes na gestão de produtos do vendedor */
 .products-grid .btn-primary {
-    width: 180px;
+    width: 140px;
     max-width: 100%;
     font-size: 1rem;
-    padding: 0.7rem 0;
+    padding: 0.5rem 0;
     border-radius: 8px;
     margin: 0.7rem auto 0 auto;
     display: block;
@@ -1040,15 +1040,15 @@ text-align: center; }
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    color: white;
+    background: linear-gradient(135deg, #8e44ad, #7d3c98) !important;
+    color: white !important;
     flex: 1;
     border: none;
     box-shadow: var(--shadow-purple);
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, var(--primary-dark), var(--secondary-dark));
+    background: linear-gradient(135deg, #7d3c98, #8e44ad) !important;
     transform: translateY(-2px);
     box-shadow: var(--shadow-purple);
 }

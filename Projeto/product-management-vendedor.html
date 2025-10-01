@@ -36,9 +36,17 @@
                 </div>
             </div>
             <div class="filter-controls" style="margin-bottom: 2rem; display:flex; gap:1rem;">
-                <input type="text" id="searchInput" placeholder="Buscar por nome..." style="padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid #ccc; width: 250px;">
-                <select id="categoryFilter" style="padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid #ccc;">
+                <input type="text" id="searchInput" placeholder="Buscar por nome..." style="padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid #ccc; width: 260px; font-size:1rem;">
+                <select id="categoryFilter" style="padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid #ccc; width: 260px; font-size:1rem;">
                     <option value="">Todas as categorias</option>
+                </select>
+                <select id="sortFilter" style="padding: 0.75rem 1rem; border-radius: 8px; border: 2px solid #a259c4; outline:none; width: 260px; font-size:1rem;">
+                    <option value="relevancia">Relevância</option>
+                    <option value="nome-az">Nome A-Z</option>
+                    <option value="menor-preco">Menor Preço</option>
+                    <option value="maior-preco">Maior Preço</option>
+                    <option value="melhor-avaliado">Melhor Avaliado</option>
+                    <option value="mais-recente">Mais Recente</option>
                 </select>
             </div>
             <div class="products-grid" id="productsGrid" style="gap:2.5rem;">
@@ -123,7 +131,7 @@ document.getElementById('logoutBtn').addEventListener('click', function() {
     } else {
         localStorage.removeItem('currentUser');
     }
-    window.location.href = 'login.html';
+    window.location.href = '../index.html';
 });
 </script>
 </body>

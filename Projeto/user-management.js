@@ -194,7 +194,7 @@ class UserManagement {
         } else if (user.profile === 'Cliente') {
             window.location.href = 'profile-cliente.html';
         } else {
-            window.location.href = 'product-management-vendedor.html';
+            window.location.href = 'profile-cliente.html';
         }
 
         return { success: true, message: 'Login realizado com sucesso', user: this.currentUser };

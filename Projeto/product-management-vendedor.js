@@ -133,7 +133,8 @@ document.getElementById('categoryFilter').addEventListener('change', function(e)
 
 
 function abrirModal(id) {
-    const produto = produtos.find(p => p.id === id);
+    // Garante comparação por string para funcionar com ids numéricos e string
+    const produto = produtos.find(p => String(p.id) === String(id));
     if (!produto) return;
     document.getElementById('modalProductName').textContent = produto.nome;
     document.getElementById('modalProductDesc').textContent = produto.descricao;

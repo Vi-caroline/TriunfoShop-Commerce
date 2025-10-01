@@ -307,7 +307,8 @@
             const name = nameInput.value.trim();
             const email = emailInput.value.trim();
             const password = passwordInput.value;
-            const profile = profileSelect.value;
+            // Usa o valor selecionado no campo de perfil
+            const profile = profileSelect.value.charAt(0).toUpperCase() + profileSelect.value.slice(1).toLowerCase();
             
             // Validate inputs
             if (!name) {
